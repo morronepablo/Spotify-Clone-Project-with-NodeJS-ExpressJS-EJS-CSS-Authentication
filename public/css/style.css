@@ -422,3 +422,22 @@
 .bottom-nav-item.active .icon {
   font-variation-settings: 'FILL'1;
 }
+
+.bottom-nav-item .indicator {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  transform: translateX(-50%);
+  background-color: var(--secondary-container);
+  border-radius: var(--radius-full);
+  opacity: 0;
+  z-index: -1;
+  transition: var(--tr-duration-short-4) var(--tr-easing-standard);
+}
+
+.bottom-nav-item.active .indicator {
+  opacity: 1;
+  width: 100%;
+}
